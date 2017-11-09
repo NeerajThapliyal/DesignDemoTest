@@ -1,0 +1,193 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <style>
+                .gridImg{
+                    width: 80px;
+                }
+            </style>
+
+<script language="JavaScript">
+        
+        //////////F12 disable code////////////////////////
+            document.onkeypress = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                   //alert('No F-12');
+                    return false;
+                }
+            }
+            document.onmousedown = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                    //alert('No F-keys');
+                    return false;
+                }
+            }
+        document.onkeydown = function (event) {
+                event = (event || window.event);
+                if (event.keyCode == 123) {
+                    //alert('No F-keys');
+                    return false;
+                }
+            }
+        /////////////////////end///////////////////////
+        
+        
+        //Disable right click script 
+        //visit http://www.rainbow.arch.scriptmania.com/scripts/ 
+        var message="Sorry, right-click has been disabled"; 
+        /////////////////////////////////// 
+        function clickIE() {if (document.all) {(message);return false;}} 
+        function clickNS(e) {if 
+        (document.layers||(document.getElementById&&!document.all)) { 
+        if (e.which==2||e.which==3) {(message);return false;}}} 
+        if (document.layers) 
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+        document.oncontextmenu=new Function("return false") 
+        // 
+        function disableCtrlKeyCombination(e)
+        {
+        //list all CTRL + key combinations you want to disable
+        var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'w');
+        var key;
+        var isCtrl;
+        if(window.event)
+        {
+        key = window.event.keyCode;     //IE
+        if(window.event.ctrlKey)
+        isCtrl = true;
+        else
+        isCtrl = false;
+        }
+        else
+        {
+        key = e.which;     //firefox
+        if(e.ctrlKey)
+        isCtrl = true;
+        else
+        isCtrl = false;
+        }
+        //if ctrl is pressed check if other key is in forbidenKeys array
+        if(isCtrl)
+        {
+        for(i=0; i<forbiddenKeys.length; i++)
+        {
+        //case-insensitive comparation
+        if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+        {
+        alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+        return false;
+        }
+        }
+        }
+        return true;
+        }
+        </script>
+    </head>
+    <body>
+        <!-- <div class="row" style="background-color:#4a4949;height: 55px;">
+            <br>
+        </div>   -->
+          
+            <div class="row" style="padding: 10px 0px;">
+                    <div class="col-md-7 col-md-offset-1">
+                        <img src="image/logo.png" alt="header"/>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 style="color:#006ab6; font-size: 3.0em;">NEPHROLOGY</h1>
+                    </div>
+            </div>
+            <section style="background-color:#eef4fb">
+                <div class="row" >
+                        <div class="col-md-7 col-md-offset-1">
+                            <img src="image/midCon.png" alt="mid"/>
+                        </div>
+                        <div class="col-md-4" style="padding: 35px 0px;">
+                            <a href=""><img style="width: 230px;" src="image/createProf.png" alt="mid"/></a><br><br>
+                            <a href=""><img style="width: 230px;" src="image/uploadDoc.png" alt="mid"/></a>
+                        </div>
+                </div>
+                <div class="row" >
+                    <div class="col-md-12"><center><h3 style="color:#58585a">Features</h3></center></div>
+                </div>
+                <div class="row" >
+                    <div class="col-md-9 col-md-offset-1" style="margin: 12px 170px; color:#58585a; ">
+                            <div class="row"  >
+                                    <div class="col-md-4">
+                                        <center>
+                                            <img class="gridImg" src="image/portfolio.png" alt="mid"/>
+                                            <h4>Portfolio</h4>
+                                            <p>Make e-portfolio a living entity. Upload clinical &nbsp;
+                                                    academic activity. Showcase up-to-date professional
+                                                    achievements. Network extensively
+                                            </p>
+                                        </center>
+                                       
+                                    </div>
+                                    <div class="col-md-4">
+                                            <center>
+                                                    <img class="gridImg" src="image/uploadic.png" alt="mid"/>
+                                                    <h4>Upload</h4>
+                                                    <p>Books, Newsletters, Monograph, Media Stories,
+                                                            Presentation, Creative Activities, Conference
+                                                            proceedings etc.
+                                                            
+                                                    </p>
+                                                </center>  
+                                    </div>
+                                    <div class="col-md-4">
+                                            <center>
+                                                    <img class="gridImg" src="image/forum.png" alt="mid"/>
+                                                    <h4>Specialty Forum </h4>
+                                                    <p>Connect, communicate and collaborate with experts
+                                                            on a regional or National forum. Show &nbsp; share
+                                                            experiences, challenges, concerns, and techniques. 
+                                                    </p>
+                                                </center>
+                                    </div>
+                            </div>
+                            <div class="row" >
+                                    <div class="col-md-4">
+                                        <center>
+                                            <img class="gridImg" src="image/menuscript.png" alt="mid"/>
+                                            <h4>Manuscript Development Services </h4>
+                                            <p>Polish manuscripts with our editing, formatting,
+                                                    figure preparation and translation services before
+                                                    submitting to Journal.
+                                                    
+                                            </p>
+                                        </center>
+                                       
+                                    </div>
+                                    <div class="col-md-4">
+                                            <center>
+                                                    <img class="gridImg" src="image/books.png" alt="mid"/>
+                                                    <h4>Access Books, Journals, Equipment </h4>
+                                                    <p>Order favorite books &nbsp; medical equipment from our
+                                                            Medical supply e-catalogue at most competitive
+                                                            pricing. Access subscribed Journal on portfolio,
+                                                            receive notifications on mobile &nbsp; email.
+                                                            
+                                                    </p>
+                                                </center>  
+                                    </div>
+                                    <div class="col-md-4">
+                                            <center>
+                                                    <img class="gridImg" src="image/publish.png" alt="mid"/>
+                                                    <h4>Publish &nbsp; Sell</h4>
+                                                    <p>Sell hard prints, eBooks, course material and audiovisual
+                                                            content directly from portfolio. Earn royalties.
+                                                    </p>
+                                                </center>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+       
+    </body>
+</html>    
